@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.university;
+
+/**
+ *
+ * @author HP
+ */
+
+       import java.util.Scanner;
+
+public class University {
+    static class Dishes {
+        String type;
+        String ingredients;
+        String cuisine;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Dishes dish = new Dishes();
+
+        System.out.print("Enter the type of dish ( sweets, savory,or anything): ");
+        dish.type = scanner.nextLine(); 
+
+        System.out.print("Enter the ingredients of the dish : ");
+        dish.ingredients = scanner.nextLine(); 
+
+        System.out.print("Enter the cuisine of the dish (e.g., Asian, Italian): ");
+        dish.cuisine = scanner.nextLine();
+        System.out.println("\nWelcome to the " + dish.cuisine + " Restaurant");
+        System.out.println("Your selected choice of Dish is: " + dish.type);
+        System.out.println("Your Dish contains the following ingredients: " + dish.ingredients);
+        System.out.println("Your dish belongs to the " + dish.cuisine + " cuisine.");
+        scanner.close();
+    }
+}
+
